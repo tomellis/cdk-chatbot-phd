@@ -1,8 +1,12 @@
-# Welcome to your CDK TypeScript project!
+# CDK AWS ChatBot
 
-This is a blank project for TypeScript development with CDK.
+This is a basic CDK TypeScript project setting up:
+ * SNS Topic
+ * CloudWatch Event for all Personal Health Dashboard (PHD) events
+ * SNS subscription from CWE to SNS
+ * .... TBC: The actual AWS chatbot deployment!
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+AWS Chatbot does not yet provide CDK constructs but do offer a [raw CFN](https://docs.aws.amazon.com/cdk/api/latest/docs/aws-chatbot-readme.html) mapping for the Slack integration. For now this project really just sets up the CWE + SNS topic + Sub, which you can deploy to each region via the `deploy.sh` script. AWS Chatbot still requires some manual steps in the console anyway but perhaps custom resource could be used for the missing Chime integration.
 
 ## Useful commands
 
